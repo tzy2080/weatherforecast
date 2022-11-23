@@ -1,0 +1,7 @@
+https://openweathermap.org/current
+https://openweathermap.org/weather-conditions
+https://visme.co/blog/website-color-schemes/ no.24
+
+https://stackoverflow.com/questions/51241664/only-want-cities-and-related-countries-in-suggestion-using-react-places-autocomp
+https://www.npmjs.com/package/react-places-autocomplete#searchOptions
+https://betterprogramming.pub/the-best-practice-with-google-place-autocomplete-api-on-react-939211e8b4ce

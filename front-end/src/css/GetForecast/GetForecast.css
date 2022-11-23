@@ -1,0 +1,140 @@
+.body-wrapper {
+    background: #4bdbd4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 5rem;
+}
+
+h1.page-title {
+    color: #FEFFFF;
+    font-weight: 600;
+    font-size: 2.6rem;
+}
+
+h2.page-title {
+    color: #17252A;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #2B7A78;
+}
+
+.search-btn {
+    background-color: #5f6fff;
+    border-color: #5f6fff;
+    height: 3rem;
+    width: 5.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.search-btn:hover {
+    background-color: #5f6fff;
+    border-color: #5f6fff;
+}
+
+.search-btn:focus {
+    background-color: #5f6fff;
+    border-color: #5f6fff;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.condition-icon {
+    width: 12rem;
+}
+
+.weather-label {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.weather-data {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.advice-text {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color:#17252A;
+}
+
+.note-icon {
+    font-size: 1.5rem;
+    color:#17252A;
+}
+
+.weather-icon {
+    font-size: 2.2rem;
+}
+
+.uv-icon {
+    font-size: 1.5rem;
+}
+
+.inner-card-style {
+    background-color: #FEFFFF;
+    border: none;
+    color: #17252A;
+}
+
+.inner-card-style:hover {
+    text-decoration: none;
+    color: #17252A;
+}
+
+.condition-icon-hourly {
+    width: 6rem;
+}
+
+.time {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.temp {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.description {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.realfeel {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.nav-pill-btn {
+    font-weight: 300 !important;
+    font-size: 1.2rem;
+}
+
+.nav-pill-btn.active {
+    background-color: #5f6fff !important;
+    border-color: #5f6fff !important;
+}
+
+.list-group.frame {
+    border: none;
+}
+
+.list-group-item.items {
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 0;
+    border-color: rgba(128, 128, 128, 0.281);
+}
+
+.search-result-description {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
