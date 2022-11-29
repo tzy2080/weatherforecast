@@ -10,7 +10,7 @@ const searchCityCoord = async (req, res) => {
         // Getting location coordinates
         axios.get(`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`)
             .then(response => {
-                res.json(response.data);
+                res.json(response.data.results);
             }).catch(error => {
                 console.log(error);
                 res.status(500).send();
