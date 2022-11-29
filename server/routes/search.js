@@ -2,12 +2,15 @@
 const router = require('express').Router();
 
 // Controllers
-const controller = require('../controllers/search');
+const {searchWeatherCurrent, searchWeatherDaily, searchCityCoord} = require('../controllers/search');
 
-// Search weather
-router.get('/city', controller.searchWeather);
+// Search current weather forecast
+router.get('/current', searchWeatherCurrent);
+
+// Search daily weather forecast
+router.get('/daily', searchWeatherDaily);
 
 // Search city coordinates
-router.get('/cities/:city', controller.searchCityCoord);
+router.get('/cities/:city', searchCityCoord);
 
 module.exports = router;
