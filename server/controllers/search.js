@@ -29,7 +29,7 @@ const searchWeatherCurrent = async (req, res) => {
         const longitude = req.query.lon;
 
         // Getting forecast data based on the location coordinates
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}&units=metric`)
             .then((response) => {
                 res.json(response.data);
             })
@@ -51,7 +51,7 @@ const searchWeatherDaily = async (req, res) => {
         const longitude = req.query.lon;
 
         // Getting forecast data based on the location coordinates
-        axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`)
+        axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}&units=metric`)
             .then((response) => {
                 res.json(response.data);
             })
