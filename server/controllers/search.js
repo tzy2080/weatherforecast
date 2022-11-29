@@ -2,18 +2,13 @@
 const axios = require('axios');
 require("dotenv").config();
 
-// Functino for searching coordinates of cities
+// Returns a list of cities with its coordinates
 const searchCityCoord = async (req, res) => {
     try {
         const cityName = req.params.city;
 
-        const params = {
-            access_key: process.env.REACT_APP_GEOCOORD_API_KEY,
-            query: cityName
-        }
-
         // Getting location coordinates
-        axios.get('http://api.positionstack.com/v1/forward', {params})
+        axios.get(`https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`)
             .then(response => {
                 res.json(response.data);
             }).catch(error => {
@@ -26,13 +21,15 @@ const searchCityCoord = async (req, res) => {
     }
 }
 
-// Function for letting the server to handle the API request from the front end
-const searchWeather = async (req, res) => {
+// Returns data for current weather forecast
+const searchWeatherCurrent = async (req, res) => {
     try {
+        // Coordinates
         const latitude = req.query.lat;
         const longitude = req.query.lon;
+
         // Getting forecast data based on the location coordinates
-        axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=alerts,minutely&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=metric`)
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`)
             .then((response) => {
                 res.json(response.data);
             })
@@ -46,4 +43,26 @@ const searchWeather = async (req, res) => {
     }
 }
 
-module.exports = { searchWeather, searchCityCoord }
+// Returns data for daily weather forecast
+const searchWeatherDaily = async (req, res) => {
+    try {
+        // Coordinates
+        const latitude = req.query.lat;
+        const longitude = req.query.lon;
+
+        // Getting forecast data based on the location coordinates
+        axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${process.env.API_KEY}`)
+            .then((response) => {
+                res.json(response.data);
+            })
+            .catch((error) => {
+                console.log(error);
+                res.status(404).send();
+            })
+    } catch (error) {
+        console.log(error);
+        res.status(500).send();
+    }
+}
+
+module.exports = { searchWeatherDaily, searchWeatherCurrent, searchCityCoord }
