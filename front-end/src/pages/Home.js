@@ -21,7 +21,7 @@ const GetForecast = () => {
             <div className="row mx-0 justify-content-center">
                 <div className="col-12 col-sm-7 text-center">
                     <h1 className="page-title">WEATHER FORECAST APP</h1>
-                    <h2 className="page-title">Powered by React.js and OpenWeatherMap</h2>
+                    <h2 className="page-title">Powered by OpenWeatherMap</h2>
                 </div>
             </div>
             <SearchBar cityName={cityName} setCityName={setCityName} setSearchResult={setSearchResult} setSelectSearchResult={setSelectSearchResult} setNotFound={setNotFound} />
@@ -30,8 +30,8 @@ const GetForecast = () => {
                     { (searchResult !== {} && !selectSearchResult) && <CityList cityName={cityName} searchResult={searchResult} setWeatherData={setWeatherData} setSelectSearchResult={setSelectSearchResult}/> }
                     { selectSearchResult && <DisplayWeather weatherData={weatherData}/>}
                     { notFound && 
-                        <div className="text-center">
-                            No result found, please ensure that the city name is correct
+                        <div className="mt-4 text-center error-text">
+                            <i className="bi bi-exclamation-circle-fill pr-2 alert-icon"></i>No result found, please ensure that the city name is correct
                         </div>
                     }
                 </div>

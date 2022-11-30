@@ -40,16 +40,18 @@ const CityList = ({cityName, searchResult, setWeatherData, setSelectSearchResult
     return (
         <div className="row mx-0 justify-content-center">
             <div className="col-12 col-md-8">
-                <span className="search-result-description pb-4">Showing <strong>{searchResult.length}</strong> locations for {`"${cityName}"`}</span>
-                <ul className="list-group frame mt-2">
-                    {
-                        searchResult.map((city, index) => {
-                            return (
-                                <City data={city} key={index} />
-                            )
-                        })
-                    }
-                </ul>
+                { searchResult.length!==0 && <span className="search-result-description pb-4">Showing <strong>{searchResult.length}</strong> locations for <strong>{`${cityName}`}</strong></span> }
+                { searchResult.length!== 0 &&
+                    <ul className="list-group frame mt-2">
+                        {
+                            searchResult.map((city, index) => {
+                                return (
+                                    <City data={city} key={index} />
+                                )
+                            })
+                        }
+                    </ul>
+                }
             </div>
         </div>
     )

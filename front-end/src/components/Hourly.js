@@ -37,6 +37,26 @@ const Hourly = ({index, data, timezone}) => {
                     <div className="card-body">
                         <div className="row">
                             <div className="col-6 pl-4">
+                                { minTemp!==undefined &&
+                                    <div className="row mb-2">
+                                        <div className="col px-0">
+                                            <span className="weather-label"><i className="bi bi-thermometer-low weather-icon-bootstrap px-1"></i> Min Temp:</span> 
+                                        </div>
+                                        <div className="col px-0">
+                                            <span className="weather-data">{minTemp} m/s</span>
+                                        </div>
+                                    </div>
+                                }
+                                { maxTemp!==undefined &&
+                                    <div className="row mb-2">
+                                        <div className="col px-0">
+                                            <span className="weather-label"><i className="bi bi-thermometer-high weather-icon-bootstrap px-1"></i> Max Temp:</span> 
+                                        </div>
+                                        <div className="col px-0">
+                                            <span className="weather-data">{maxTemp} m/s</span>
+                                        </div>
+                                    </div>
+                                }
                                 {windSpeed!==undefined && 
                                     <div className="row mb-2">
                                         <div className="col px-0">

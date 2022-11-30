@@ -3,7 +3,7 @@ body{
 }
 
 .body-wrapper {
-    background: #4bdbd4;
+    background: #FDFEFE;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -11,38 +11,60 @@ body{
 }
 
 h1.page-title {
-    color: #FEFFFF;
+    color: #540375;
     font-weight: 600;
-    font-size: 2.6rem;
+    font-size: 2rem;
 }
 
 h2.page-title {
-    color: #17252A;
-    font-weight: 500;
-    font-size: 2rem;
+    color: #434242;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 h3 {
     color: #2B7A78;
 }
 
+.search-bar {
+    font-weight: 500;
+    font-size: 1rem;
+    border-width: 2px;
+    height: 2.5rem;
+    border-radius: 10px;
+    color: #434242;
+}
+
 .search-btn {
     background-color: #5f6fff;
     border-color: #5f6fff;
-    height: 3rem;
-    width: 5.5rem;
-    font-size: 1.2rem;
-    font-weight: 300;
+    height: 2.4rem;
+    width: 8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 .search-btn:hover {
-    background-color: #5f6fff;
+    background-color: #fff;
     border-color: #5f6fff;
+    border-width: 2px;
+    color: #5f6fff;
 }
 
 .search-btn:focus {
     background-color: #5f6fff;
     border-color: #5f6fff;
+}
+
+.error-text {
+    font-weight: 500;
+}
+
+.alert-icon {
+    font-size: 1.2rem;
+    color: #B73E3E;
 }
 
 .form-control:focus {
@@ -56,11 +78,13 @@ h3 {
 .weather-label {
     font-weight: 500;
     font-size: 1.05rem;
+    color: #434242;
 }
 
 .weather-data {
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: #222222;
 }
 
 .advice-text {
@@ -76,6 +100,10 @@ h3 {
 
 .weather-icon {
     font-size: 2.2rem;
+}
+
+.weather-icon-bootstrap {
+    font-size: 1.4rem;
 }
 
 .uv-icon {
@@ -98,33 +126,38 @@ h3 {
 }
 
 .time {
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #222222;
 }
 
 .temp {
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    color: #222222;
 }
 
 .description {
-    font-weight: 300;
-    font-size: 1.5rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #222222;
 }
 
 .realfeel {
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #222222;
 }
 
 .nav-pill-btn {
-    font-weight: 300 !important;
+    font-weight: 500 !important;
     font-size: 1.2rem;
 }
 
 .nav-pill-btn.active {
     background-color: #5f6fff !important;
     border-color: #5f6fff !important;
+    border-radius: 8px;
 }
 
 .list-group.frame {
@@ -132,13 +165,20 @@ h3 {
 }
 
 .list-group-item.items {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
     border-radius: 0;
+    color: #434242;
     border-color: rgba(128, 128, 128, 0.281);
 }
 
+.list-group-item.items:hover {
+    background-color: #5f6fff;
+    color: #fff;
+}
+
 .search-result-description {
-    font-weight: 400;
-    font-size: 0.9rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #222222;
 }
