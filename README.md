@@ -2,7 +2,7 @@
 A website that allows users to view the current weather condition and weather forecast of different locations.
 
 ## Tech stack
-Express, React, Node.js.
+Express, React, Node.js, Bootstrap.
 
 ## Features
 ### Search location
